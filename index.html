@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>Binary Tree</title>
+  <script language="javascript" type="text/javascript" src="p5/p5/p5.js"></script>
+  <script language="javascript" src="p5/p5/addons/p5.dom.js"></script>
+  <script language="javascript" src="p5/p5/addons/p5.sound.js"></script>
+  <script language="javascript" type="text/javascript" src="node.js"></script>
+  <script language="javascript" type="text/javascript" src="tree.js"></script>
+ 
+<script>
+var tree;
+tree = new Tree();
+var arr = new Array();
+function setup() {
+		createCanvas(900, 900);  	
+		var x = document.getElementById('insert').value;	
+		if(x==""){}
+		else{
+			x = parseInt(x)
+			tree.addValue(x);
+			background(70,30,180);
+
+	  // Traverse the tree
+			tree.traverse();
+
+		}
+		
+		function draw(){
+			createCanvas(900, 900);
+		}
+		function bg(){
+			background(70,30,180);
+		}
+		
+}
+</script>
+</head>
+
+<body>
+<p>
+Insert Value : 
+<input type = "text" id ="insert">
+<input type="button" value="Insert" name = "insert" onclick="setup()">
+</p>
+</body>
+
+</html>
